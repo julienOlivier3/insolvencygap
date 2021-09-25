@@ -3,7 +3,6 @@
 *.RData
 *.Ruserdata
 *.r
-*.R
 *.dta
 01_Literature
 02_Data
