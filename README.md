@@ -8,4 +8,4 @@ COVID-19 placed a special role on fiscal policy in rescuing companies short of l
 Unfortunately, the underlying data is proprietary and cannot be shared via GitHub. However, data will be made available form the authors upon reasonable request.
 
 **Presentation**:<br/>
-Presentation slides of the paper can be found [here](https://raw.githack.com/julienOlivier3/insolvencygap/main/Small_Firms_and_the_COVID-19_Insolvency_Gap.pdf)
+Presentation slides of the paper can be found [here](https://raw.githack.com/julienOlivier3/insolvencygap/main/Small_Firms_and_the_COVID-19_Insolvency_Gap.pdf).
