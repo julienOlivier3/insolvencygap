@@ -1,43 +1,15 @@
-library(scales)
-library(margins)
-library(haven)
-#library(pmdplyr)
-library(lubridate)
-library(tsibble)
-library(rlist)
-library(descr)
-library(MatchIt)
-library(cem)
-library(scales)
-library(pROC)
-library(zoo)
-library(collapse)
-library(xlsx)
-library(gridExtra)
-library(weights)
-library(survey)
-library(viridis)
-library(DiagrammeR)
-library(knitr)
-library(RColorBrewer)
-library(ggpubr)
-library(tikzDevice)
-library(xlsx)
-library(pBrackets)
-library(igraph)
-library(grid)
-library(GISTools)
-library(tidyverse)
-#library(cobalt)
-#library(Zelig)
-
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(scales, margins, haven, lubridate, tsibble, rlist, descr, 
+               MatchIt, cem, scales, pROC, zoo, collapse, xlsx, girdExtra, 
+               weights, survey, viridis, DiagrammeR, knitr, RColorBrewer,
+               ggbubr, tikzDevice, pBracktes, igraph, grid, GISTools, tidyverse)
 
 
 
 
 # Setup -------------------------------------------------------------------
 # ggplot Template
-source(file = "Q:\\Meine Bibliotheken\\Research\\06_Environments\\ggplot_template.R")
+source(file = here("03_Code\\02_R\\ggplot_template.R"))
 
 # Print crefo nicely
 options(pillar.sigfig=10)

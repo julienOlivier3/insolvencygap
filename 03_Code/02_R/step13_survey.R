@@ -1,6 +1,8 @@
 # RESULTS
-setwd("Q:\\Meine Bibliotheken\\Research\\SME_Corona")
-source(file.path(getwd(), '03_Code', '02_R', 'step0_setup.R'))
+# Setup -------------------------------------------------------------------
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(here, tidyverse)
+source(file.path(here(), '03_Code', '02_R', 'step0_setup.R'))
 
 # -------------------------------------------------------------------------
 # #########################################################################
@@ -21,7 +23,7 @@ df_panel <- df_panel %>%
 load(file = file.path(getwd(), '02_Data', '01_PanelData', 'df_strata.RData'))
 
 # 3)
-df_surv <- read_dta(file.path(getwd(), '02_Data', '07_Survey', 'gpges_kern_w1-w13.dta'))
+df_surv <- read_dta(file.path(here(), '02_Data', '07_Survey', '01_Gründungspanel', 'gpges_kern_w1-w13.dta'))
 # Mapping crefo gpkey
 df_crefo1 <- read_dta(file.path(getwd(), '02_Data', '07_Survey', "gp_sges.dta"))
 df_crefo2 <- read_dta(file.path(getwd(), '02_Data', '07_Survey', 'crefo_gpkey_w13_erst.dta'))
@@ -33,7 +35,7 @@ map_gp_crefo <- df_crefo1 %>%
 # Prepare survey
 df_surv <- df_surv %>% 
   filter(jahr==2019) %>% 
-  select(gpkey, branche11, branche11, gr_jahr, unt_bet:strat_sonst) 
+  select(gpkey, branche11, gr_jahr, unt_bet:strat_sonst) 
 
 # Merge crefo
 df_surv <- df_surv %>% 
